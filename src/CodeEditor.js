@@ -12,7 +12,7 @@ const CodeEditor = () => {
     const timer = setTimeout(() => {
       if (code.trim()) {
         axios
-          .post("http://localhost:5050/analyze", { code })
+          .post("https://code-analyzer-backend.onrender.com/analyze", { code })
           .then((res) => setAnalysis(res.data))
           .catch((error) => {
             if (
